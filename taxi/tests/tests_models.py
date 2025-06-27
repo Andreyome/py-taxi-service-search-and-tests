@@ -18,7 +18,7 @@ class ModelsTest(TestCase):
             first_name="Test First",
             last_name="Test Last",
             password="<PASSWORD>",
-            license_number="Test License",
+            license_number="ABC12345",
         )
         self.assertEqual(str(driver),
                          f"{driver.username}"
@@ -31,7 +31,7 @@ class ModelsTest(TestCase):
             first_name="Test First",
             last_name="Test Last",
             password="<PASSWORD>",
-            license_number="Test License",
+            license_number="ABC12345",
         )
         manufacturer = Manufacturer.objects.create(name="Test Manufacturer")
         car = Car.objects.create(

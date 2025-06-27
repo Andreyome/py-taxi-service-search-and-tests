@@ -75,7 +75,7 @@ class PrivateTest(TestCase):
             first_name="Test First",
             last_name="Test Last",
             password="<PASSWORD>",
-            license_number="Test License",
+            license_number="ABC12345",
         )
         res = self.client.get(DRIVER_DETAILS_URL)
         self.assertEqual(res.status_code, 200)
