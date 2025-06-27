@@ -27,6 +27,7 @@ class PublicTest(TestCase):
         res = self.client.get(DRIVER_LIST_URL)
         self.assertNotEqual(res.status_code, 200)
 
+
 class PrivateTest(TestCase):
     def setUp(self) -> None:
         self.user = get_user_model().objects.create_user(
@@ -37,11 +38,11 @@ class PrivateTest(TestCase):
 
     def test_user_can_see_car_list(self):
         manufacturer = Manufacturer.objects.create(name="Test Manufacturer")
-        car = Car.objects.create(
+        Car.objects.create(
             manufacturer=manufacturer,
             model="Test Model",
         )
-        car = Car.objects.create(
+        Car.objects.create(
             manufacturer=manufacturer,
             model="Test Model 2",
         )
